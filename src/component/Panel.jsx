@@ -9,12 +9,12 @@ export default function Panel() {
     const [loading, setloading] = useState(false);
     const fetchData = async () => {
         setloading(true);
-        await Axios.post("http://localhost:8080/fetch");
+        await Axios.post("https://zauba-backened.herokuapp.com/fetch");
         setloading(false);
     };
     const props = {
         name: "file",
-        action: "http://localhost:8080/upload",
+        action: "https://zauba-backened.herokuapp.com/upload",
         headers: {},
         onChange(info) {
             console.log("info", info);
